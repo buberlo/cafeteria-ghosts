@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "Cafeteria Ghosts",
+    "slug": "cafeteria-ghosts",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "cafeteria-ghosts",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0f172a"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cafeteria.ghosts",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "remote-notification"
+        ],
+        "NSVibrationUsageDescription": "Cafeteria Ghosts uses vibration to escalate unpaid orders and split bills."
+      }
+    },
+    "android": {
+      "package": "com.cafeteria.ghosts",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0f172a"
+      },
+      "permissions": [
+        "VIBRATE",
+        "POST_NOTIFICATIONS",
+        "INTERNET"
+      ],
+      "softwareKeyboardMode": "resize"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-vibration",
+      [
+        "expo-notifications",
+        {
+          "color": "#7c3aed",
+          "defaultChannel": "default"
+        }
+      ],
+      [
+        "onesignal-expo-plugin",
+        {
+          "Mode": "Production",
+          "appId": "00000000-0000-0000-0000-000000000000"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "00000000-0000-0000-0000-000000000000"
+      }
+    }
+  }
+}
